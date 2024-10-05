@@ -30,7 +30,7 @@ def compute_metrics(p: EvalPrediction):
     return {"confusion_matrix": cm, "f1": f1}
 
 
-df = pd.read_csv("dataset-multiclass.txt")
+df = pd.read_csv("LyricPoetry-multiclass.txt")
 df = df.sample(frac=1).reset_index(drop=True)
 
 label_encoder = LabelEncoder()
