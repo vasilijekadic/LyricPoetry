@@ -57,8 +57,8 @@ def classify_text(text, labels):
     return labels
 
 
-# df = pd.read_csv("dataset-multilabel.txt")
-df = pd.read_csv("dataset-multilabel-fewshot.txt")
+# df = pd.read_csv("LyricPoetry-multilabel.txt")
+df = pd.read_csv("LyricPoetry-multilabel-fewshot.txt")
 mlb = MultiLabelBinarizer()
 mlb_result = mlb.fit_transform([str(df.loc[i, 'labels']).split(',') for i in range(len(df))])
 df = pd.concat([df['text'], pd.DataFrame(mlb_result, columns=list(mlb.classes_))], axis=1)
