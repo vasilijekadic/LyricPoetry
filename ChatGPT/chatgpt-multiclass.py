@@ -55,8 +55,8 @@ def classify_text(text, labels):
     return labels
 
 
-# df = pd.read_csv("dataset-multiclass.txt")
-df = pd.read_csv("dataset-multiclass-fewshot.txt")
+# df = pd.read_csv("LyricPoetry-multiclass.txt")
+df = pd.read_csv("LyricPoetry-multiclass-fewshot.txt")
 df = df.sample(frac=1).reset_index(drop=True)
 
 corpus = df["text"]
