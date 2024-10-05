@@ -20,7 +20,7 @@ def tokenize(text):
     return reldi_tokeniser.run(text, 'sr', bert=True).split()
 
 
-df = pd.read_csv("dataset-multiclass.txt")
+df = pd.read_csv("LyricPoetry-multiclass.txt")
 df = df.sample(frac=1).reset_index(drop=True)
 
 corpus = df["text"]
